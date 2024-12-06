@@ -29,7 +29,6 @@ def find_a_for_nvpeak(f, nvpeak_value):
 
 
 file_pattern = "/home/users/dae/ishiyama/Uchuu/RockstarExtendedAll/RockstarExtended/halodir_034/halolist_z0p94_{}.h5"
-#file_pattern = "/home/users/dae/ishiyama/Uchuu/RockstarExtendedAll/RockstarExtended/halodir_036/halolist_z0p78_{}.h5"
 chunk_size = 10  # Adjust the chunk size based on your memory constraints
 dfs = []
 
@@ -62,11 +61,8 @@ minmass = 8.5
 maxmass = 12.3
 
 df['Vpeak_scatter'] = df['Vpeak']*(1+np.random.normal(loc=0, scale=0.25, size=len(df)))
-print(len(df[df['Vpeak_scatter']>150]), df[df['Vpeak_scatter']>120])
-
 df = df[df['Vpeak_scatter']>150]
 
-print(len(df))
 print('Scatter added to Vpeak')
 
 Vpeak = df['Vpeak_scatter'].values
@@ -95,7 +91,7 @@ df['nvpeak'] = nvpeak_interpolation(Vpeak)
 
 print('nVpeak interpolated')
 
-logMstll, ngals = np.loadtxt('SMF_cumulative_high_tres_trozos.csv', skiprows=1, delimiter=',', unpack=True)
+logMstll, ngals = np.loadtxt('SMF_cumulative_high_redshift.csv', skiprows=1, delimiter=',', unpack=True)
 
 #I will	interpolate the complete smf just in case it is necessary
 f = interpolate.interp1d(logMstll, ngals, kind='cubic', fill_value='extrapolate')
