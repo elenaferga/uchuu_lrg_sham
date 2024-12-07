@@ -9,7 +9,7 @@ This repository contains all the needed codes in order to construct a Uchuu-LRG 
 This code applies the SHAM method to each box. One has to change the snapshot (file_pattern, line 31) and run it once per snapshot
 
 ### **shells.py** 
-Each of the codes generated from sham.py is an input from shells.py. This code generates shells using the method from [Alex et al. 2022](https://academic.oup.com/mnras/article/516/3/4529/6694100).  From each box, you generate a shell in a redshift range. 
+Each of the codes generated from sham.py is an input from shells.py. This code generates shells using the method from [Smith, A. et al. 2022](https://academic.oup.com/mnras/article/516/3/4529/6694100).  From each box, you generate a shell in a redshift range. 
 
 ### **concatenate.sh** 
 This is a shell code that concatenates all the shells generated from shells.py in order to have a cut sky lightcone. 
