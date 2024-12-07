@@ -2,6 +2,10 @@
 This repository contains all the needed codes in order to construct a Uchuu-LRG mock which reproduces DESI Y1-Y3 2pcf. 
 
 ## Files of the respository 📁
+
+### **smf_Y1/** 
+This folder contains files with the observed SMF from DESI LRG Y1 using CIGALE stellar masses estimations. They are calculated in redshift bins of width 0.01 from z=0.4 to z=1.1.
+
 ### **SMF_cumulative_{}_redshift.csv** 
 {} can be *high* or *low*. It is the complete SMF we use in the SHAM method.
 
